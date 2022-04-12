@@ -1,0 +1,528 @@
+@charset "UTF-8";
+
+/*主要模块开始*/
+.main {
+    width: 100%;
+    height: 480px;
+    position: relative;
+}
+
+.bigBg {
+    width: 100%;
+    height: 480px;
+    position: absolute;
+    ;
+}
+
+.bigBg a {
+    display: block;
+    width: 100%;
+    height: 480px;
+    background: url("../images/bigBg.png") center center no-repeat;
+}
+
+.main-inner {
+    height: 480px;
+    position: relative;
+}
+
+/*菜单*/
+.menu {
+    width: 190px;
+    height: 464px;
+    background-color: #6E6568;
+    float: left;
+    padding-top: 16px;
+}
+
+.menu li {
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu li a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.menu li a:hover {
+    color: #c81623;
+}
+
+.menu li .spancer {
+    margin: 0 3px 0 5px;
+    color: #ffffff;
+}
+
+/*轮播图*/
+.slider {
+    width: 790px;
+    height: 480px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.slider-main {
+    height: 340px;
+    margin-bottom: 10px;
+}
+
+.slider-main-indicator {
+    width: 166px;
+    height: 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -91px;
+}
+
+.slider-main-indicator li {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.slider-main-indicator li.last {
+    margin-right: 0;
+}
+
+.slider-main-indicator li.current {
+    background-color: #DB192A;
+}
+
+/*左右按钮*/
+.arrow {
+    display: none;
+}
+
+/*开始时候按钮隐藏*/
+.slider-main:hover .arrow {
+    display: block;
+}
+
+/*鼠标放在父元素slider-main上，后面的子元素arrow会显示。*/
+.arrow-left,
+.arrow-right {
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    font: bold 18px/60px simsun;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*left和right是两个不同的属性，需要分别加上*/
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.slider-extend {
+    height: 130px;
+    margin-left: -10px;
+    /*强大的负边距02，增加宽度，记得父盒子加上overfl：hidden*/
+}
+
+.slider-extend a {
+    width: 390px;
+    height: 130px;
+    float: left;
+    margin-left: 10px;
+}
+
+/*右边*/
+.main-inner-right {
+    width: 190px;
+    height: 480px;
+    background-color: #ffffff;
+    float: right;
+    overflow: hidden;
+}
+
+/*用户*/
+.user {
+    height: 84px;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 15px 17px 16px 15px;
+    overflow: hidden;
+}
+
+.user-info {
+    margin-bottom: 10px;
+}
+
+.user-info-avatar {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.user-info-avatar a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("../images/sprite_userinfo@1x.png") -70px 0;
+}
+
+.user-info-avatar a img {
+    width: 40px;
+    /*height: 40px;*/
+    border-radius: 50%;
+    margin: 5px;
+    /*margin: 5px 5px;*/
+}
+
+.user-info-show {
+    float: left;
+    margin-left: 8px;
+    line-height: 20px;
+}
+
+.user-info-show p {
+    padding-top: 2px;
+}
+
+.user-profit {
+    height: 24px;
+    margin-right: -10px;
+}
+
+.user-profit a {
+    display: block;
+    width: 70px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #E01222;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    color: #F10215;
+}
+
+.user-profit a:hover {
+    background-color: #E01222;
+    color: #ffffff;
+}
+
+/*新闻*/
+.news {
+    height: 154px;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0 15px 0 13px;
+}
+
+.news-tit {
+    height: 22px;
+    border-bottom: 1px solid #E6E6E6;
+    padding-top: 4px;
+    line-height: 22px;
+    position: relative;
+}
+
+.news-tit .sale {
+    padding-right: 13px;
+    margin-right: 2px;
+    border-right: 1px solid #dfe0e1;
+    color: #333;
+}
+
+.news-tit .sale:hover {
+    color: #c81623;
+}
+
+.news-tit .notice {
+    padding-left: 13px;
+    color: #333;
+}
+
+.news-tit .notice:hover {
+    color: #c81623;
+}
+
+.news-tit .more {
+    float: right;
+}
+
+.news-tit .line {
+    width: 28px;
+    height: 2px;
+    background-color: #DB192B;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    /*或者bottom: -1px;*/
+}
+
+.news-con {
+    padding-top: 12px;
+}
+
+.news-con li {
+    line-height: 24px;
+}
+
+/*生活服务*/
+.life-service {
+    height: 209px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.life-service li {
+    width: 47px;
+    height: 69px;
+    border: 1px solid #E7E7E7;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.life-service li a {
+    display: block;
+    width: 47px;
+    height: 57px;
+    padding-top: 12px;
+    position: relative;
+}
+
+.life-service li a .icon {
+    display: block;
+    width: 25px;
+    height: 27px;
+    background: url("../images/sprite_fs@1x.png") 0 -86px;
+    margin: 0 auto;
+}
+
+.life-service li a p {
+    padding-top: 6px;
+    text-align: center;
+}
+
+.life-service li .corner {
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*右边角落*/
+.life-service li .corner i {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #E01121;
+    color: #ffffff;
+    line-height: 12px;
+}
+
+.life-service li .corner em {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-width: 2px 6px;
+    border-style: solid;
+    border-color: #E01121 #E01121 transparent #E01121;
+}
+
+/*主要模块结束*/
+/*秒杀模块开始*/
+.seckill {
+    height: 305px;
+    margin-top: 11px;
+}
+
+/*秒杀标题*/
+.seckill-tit {
+    height: 55px;
+    background: url("../images/seckill_hd.png");
+    padding: 0 20px 0 72px;
+    position: relative;
+}
+
+.seckill-tit-l i.icon1 {
+    width: 20px;
+    height: 20px;
+    background: url("../images/sprite_index@1x.png") -194px -52px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.seckill-tit-l em.icon2 {
+    width: 43px;
+    height: 39px;
+    background: url("../images/sprite_index@1x.png") 0px -40px;
+    position: absolute;
+    top: 8px;
+    left: 29px;
+}
+
+.seckill-tit-l h3 {
+    float: left;
+    margin-right: 13px;
+    font: 24px/55px microsoft yahei;
+    color: #fff;
+}
+
+.seckill-tit-l a {
+    float: left;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.seckill-tit-l .iconfont {
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.seckill-tit-r span {
+    float: left;
+    margin-top: 25px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.seckill-tit-r img {
+    float: left;
+    margin: 10px 7px 8px;
+}
+
+/*秒杀内容*/
+.seckill-con {
+    height: 225px;
+    background-color: #fff;
+    padding: 12px 0 13px;
+}
+
+.seckill-con-pro {
+    width: 1000px;
+    height: 225px;
+    float: left;
+}
+
+.seckill-con-pro li {
+    width: 169px;
+    height: 225px;
+    border-right: 1px solid #E7E7E7;
+    float: left;
+    padding: 0 15px;
+}
+
+.seckill-con-pro li a {
+    display: block;
+    width: 169px;
+    height: 196px;
+    text-align: center;
+    position: relative;
+}
+
+.seckill-con-pro li a img {
+    margin: 17px 0 18px;
+}
+
+.seckill-con-pro-name {
+    height: 32px;
+    line-height: 17px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.seckill-con-pro .tag {
+    width: 24px;
+    height: 32px;
+    background: url("../images/sprite_index@1x.png") -54px -40px;
+    position: absolute;
+    padding: 8px 3px 0 3px;
+    left: 0;
+    top: 0;
+    color: #ffffff;
+}
+
+.seckill-con-pro .shadow {
+    width: 169px;
+    height: 20px;
+    background: url("../images/sprite_index@1x.png");
+    position: absolute;
+    left: 0px;
+    bottom: 47px;
+}
+
+.seckill-con-pro .price {
+    height: 26px;
+    line-height: 26px;
+    padding-top: 2px;
+}
+
+.price .new-price {
+    color: #F10215;
+    margin-right: 5px;
+}
+
+.price .new-price em {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*秒杀模块左右按钮*/
+.seckill-con-pro:hover .arrow {
+    display: block;
+}
+
+.seckill-con-pro .arrow-left,
+.seckill-con-pro .arrow-right {
+    width: 20px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .1);
+    line-height: 50px;
+    font-size: 16px;
+    color: #636363;
+}
+
+.seckill-con-pro .arrow-left {
+    left: 8px;
+}
+
+.seckill-con-pro .arrow-right {
+    right: 8px;
+}
+
+/*右边的特殊图片*/
+.seckill-con-special {
+    width: 190px;
+    height: 226px;
+    float: right;
+}
+
+.seckill-con-special a {
+    display: block;
+    width: 180px;
+    height: 226px;
+}
+
+/*秒杀模块结束*/
